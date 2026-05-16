@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  {
+    title: '[Placeholder Project One]',
+    year: '2025',
+    description: 'Short description of the project, what it does, and the role Matt played.',
+    href: '#',
+  },
+  {
+    title: '[Placeholder Project Two]',
+    year: '2024',
+    description: 'Short description of the project, what it does, and the role Matt played.',
+    href: '#',
+  },
+  {
+    title: '[Placeholder Project Three]',
+    year: '2023',
+    description: 'Short description of the project, what it does, and the role Matt played.',
+    href: '#',
+  },
+];
+---
+
+<Layout title="Projects — Matt Glenver Limbaga">
+  <h1>Projects</h1>
+  <p>[Placeholder] Selected work. A line about how the list is curated.</p>
+
+  <ul class="list-plain">
+    {projects.map((p) => (
+      <li>
+        <a href={p.href}>{p.title}</a>
+        <span class="meta"> — {p.year}</span>
+        <p>{p.description}</p>
+      </li>
+    ))}
+  </ul>
+</Layout>
